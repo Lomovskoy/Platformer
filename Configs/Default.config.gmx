@@ -655,5 +655,16 @@
     <option_xbone_texture_page>1024</option_xbone_texture_page>
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
-  <ConfigConstants/>
+  <ConfigConstants>
+    <constants number="8">
+      <constant name="key_right">keyboard_check(vk_right)</constant>
+      <constant name="key_left">keyboard_check(vk_left)</constant>
+      <constant name="key_jump">keyboard_check(vk_up)</constant>
+      <constant name="xAxis">(key_right - key_left)</constant>
+      <constant name="hspd">phy_speed_x</constant>
+      <constant name="vspd">phy_speed_y</constant>
+      <constant name="movesped">1</constant>
+      <constant name="jump_hight">-500</constant>
+    </constants>
+  </ConfigConstants>
 </Config>

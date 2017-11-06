@@ -13,6 +13,9 @@
     <background>background\back_blass</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\state_normal.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\object_wall</object>
     <object>objects\object_player</object>

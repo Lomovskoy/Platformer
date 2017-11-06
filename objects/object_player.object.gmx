@@ -25,15 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Фиксированный поворот</string>
+            <string>Инициализация переменных</string>
           </argument>
         </arguments>
       </action>
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -45,11 +45,65 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>phy_fixed_rotation = true</string>
+            <string>//Фиксированный поворот
+phy_fixed_rotation = false;
+//Отображает текущее состояние (название скрипта)
+state = state_normal;
+//Отображает количество доступных прыжков
+jumps = 0;
+//Проверка на земле ли мы
+grounded = false;
+</string>
           </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
           <argument>
-            <kind>0</kind>
-            <string>true</string>
+            <kind>1</kind>
+            <string>// Проверка земли
+//grounded = place_meeting(x,y+1,object_wall);
+/*Есть аналогиная этому функция*/
+grounded = physics_test_overlap(x,y,90,object_wall);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Текщее состояние
+script_exists(state)
+</string>
           </argument>
         </arguments>
       </action>
@@ -72,6 +126,27 @@
           <argument>
             <kind>1</kind>
             <string>Это событие столкновения со стеной</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//кометраий
+</string>
           </argument>
         </arguments>
       </action>
